@@ -1,0 +1,6 @@
+{
+  "name": "Chrono Nutrition",
+  "description": "Tactile skeuomorphic calorie & hydration tracker with AI optical food recognition and weekly chronometric audit.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

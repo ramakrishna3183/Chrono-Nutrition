@@ -1,0 +1,213 @@
+@import "tailwindcss";
+
+@theme {
+  --font-epilogue: "Epilogue", sans-serif;
+  --font-manrope: "Manrope", sans-serif;
+  --font-mono: "Space Mono", monospace;
+
+  --color-surface: #fff8f5;
+  --color-surface-dim: #e2d8d2;
+  --color-surface-bright: #fff8f5;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #fcf2eb;
+  --color-surface-container: #f6ece6;
+  --color-surface-container-high: #f0e6e0;
+  --color-surface-container-highest: #eae1da;
+  --color-on-surface: #1f1b17;
+  --color-on-surface-variant: #554336;
+  --color-inverse-surface: #342f2b;
+  --color-inverse-on-surface: #f9efe8;
+  --color-outline: #887364;
+  --color-outline-variant: #dbc2b0;
+  --color-surface-tint: #904d00;
+  --color-primary: #8d4b00;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #b15f00;
+  --color-on-primary-container: #fffbff;
+  --color-inverse-primary: #ffb77d;
+  --color-secondary: #006c4a;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #82f5c1;
+  --color-on-secondary-container: #00714e;
+  --color-tertiary: #006194;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #007bb9;
+  --color-on-tertiary-container: #fdfcff;
+  --color-primary-fixed: #ffdcc3;
+  --color-primary-fixed-dim: #ffb77d;
+  --color-on-primary-fixed: #2f1500;
+  --color-secondary-fixed: #85f8c4;
+  --color-secondary-fixed-dim: #68dba9;
+  --color-tertiary-fixed: #cce5ff;
+  --color-tertiary-fixed-dim: #93ccff;
+}
+
+/* Tactile Skeuomorphic Physical Styling Utilities */
+.chassis-texture {
+  background-color: #fff8f5;
+  background-image: 
+    radial-gradient(#dbc2b0 0.85px, transparent 0.85px),
+    linear-gradient(180deg, #fff8f5 0%, #f6ece6 100%);
+  background-size: 16px 16px, 100% 100%;
+}
+
+.brushed-metal {
+  background: linear-gradient(135deg, #fbf7f4 0%, #eae1da 35%, #f6ece6 50%, #d8ccc4 70%, #fcf7f4 100%);
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.95),
+    inset 0 -1px 2px rgba(85, 67, 54, 0.22),
+    0 4px 12px rgba(41, 37, 36, 0.08);
+}
+
+.sunken-well {
+  background: #e2d8d2;
+  box-shadow: 
+    inset 0 3px 6px rgba(41, 37, 36, 0.35),
+    inset 0 1px 2px rgba(0, 0, 0, 0.45),
+    0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.recessed-groove {
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.35), inset 0 1px 2px rgba(0, 0, 0, 0.45), 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.recessed-shallow {
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.22), 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.machined-plate {
+  box-shadow: 0 8px 24px -4px rgba(41, 37, 36, 0.12), 0 2px 6px -1px rgba(41, 37, 36, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border-top: 1px solid rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid rgba(85, 67, 54, 0.18);
+}
+
+.tactile-button {
+  background: linear-gradient(180deg, #fffcfb 0%, #edd8cb 100%);
+  box-shadow: 
+    0 3px 6px rgba(41, 37, 36, 0.16),
+    0 1px 2px rgba(41, 37, 36, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1.5px 0 #bca799;
+  transition: all 0.08s ease-out;
+}
+.tactile-button:active {
+  transform: translateY(2px);
+  box-shadow: 
+    0 1px 2px rgba(41, 37, 36, 0.1),
+    inset 0 2px 4px rgba(41, 37, 36, 0.35);
+}
+
+.tactile-button-amber {
+  background: linear-gradient(180deg, #d47500 0%, #8d4b00 100%);
+  box-shadow: 
+    0 4px 8px rgba(141, 75, 0, 0.35),
+    0 1px 2px rgba(47, 21, 0, 0.25),
+    inset 0 1px 0 rgba(255, 220, 195, 0.6),
+    inset 0 -2px 0 #572a00;
+  transition: all 0.08s ease-out;
+}
+.tactile-button-amber:active {
+  transform: translateY(2px);
+  box-shadow: 
+    0 1px 2px rgba(47, 21, 0, 0.2),
+    inset 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.tactile-button-blue {
+  background: linear-gradient(180deg, #0284c7 0%, #006194 100%);
+  box-shadow: 
+    0 4px 8px rgba(0, 97, 148, 0.35),
+    0 1px 2px rgba(0, 29, 49, 0.25),
+    inset 0 1px 0 rgba(204, 229, 255, 0.6),
+    inset 0 -2px 0 #003653;
+  transition: all 0.08s ease-out;
+}
+.tactile-button-blue:active {
+  transform: translateY(2px);
+  box-shadow: 
+    0 1px 2px rgba(0, 29, 49, 0.2),
+    inset 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.glass-card-over {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.72) 0%, rgba(255, 248, 245, 0.48) 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.95);
+  border-left: 1px solid rgba(255, 255, 255, 0.7);
+  border-right: 1px solid rgba(219, 194, 176, 0.5);
+  border-bottom: 1px solid rgba(136, 115, 100, 0.3);
+  backdrop-filter: blur(12px);
+  box-shadow: 
+    0 8px 24px -4px rgba(85, 67, 54, 0.12),
+    0 2px 6px -1px rgba(85, 67, 54, 0.08);
+}
+
+.water-shimmer {
+  background: linear-gradient(180deg, rgba(147, 204, 255, 0.92) 0%, rgba(0, 97, 148, 0.95) 100%);
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.7), inset 0 -3px 8px rgba(0, 43, 68, 0.4);
+}
+
+.leather-stitch {
+  border: 1px dashed #bca799;
+  box-shadow: inset 0 0 0 2px #f6ece6, 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.screw-accent {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #e5dad2 0%, #a8988d 100%);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8), 0 1px 1px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+.screw-accent::before {
+  content: '';
+  position: absolute;
+  top: 3.5px;
+  left: 1px;
+  right: 1px;
+  height: 1px;
+  background: #554336;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.glass-specular {
+  background: linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.05) 45%, rgba(255,255,255,0) 100%);
+}
+
+.glass-vial {
+  background: linear-gradient(90deg, rgba(255,255,255,0.6) 0%, rgba(240,240,240,0.1) 25%, rgba(255,255,255,0.3) 70%, rgba(180,180,180,0.5) 100%);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.25), 0 4px 6px rgba(0,0,0,0.08);
+}
+
+.vial-liquid {
+  background: linear-gradient(180deg, #38bdf8 0%, #006194 65%, #004b73 100%);
+  box-shadow: inset 0 2px 2px rgba(255,255,255,0.6), inset 0 -2px 4px rgba(0,29,49,0.8);
+}
+
+.knurled-dial {
+  background: repeating-conic-gradient(#dbc2b0 0deg 4deg, #887364 4deg 8deg);
+  box-shadow: 0 4px 12px rgba(41, 37, 36, 0.25), inset 0 2px 3px rgba(255,255,255,0.8);
+}
+
+.pilot-lamp-amber {
+  box-shadow: 0 0 6px #ffb77d, 0 0 10px #b15f00, inset 0 1px 1px #fff;
+}
+
+.pilot-lamp-green {
+  box-shadow: 0 0 6px #82f5c1, 0 0 10px #006c4a, inset 0 1px 1px #fff;
+}
+
+.pilot-lamp-blue {
+  box-shadow: 0 0 6px #93ccff, 0 0 10px #006194, inset 0 1px 1px #fff;
+}
+
+/* Custom font helper classes */
+.font-headline {
+  font-family: var(--font-epilogue);
+}
+.font-body {
+  font-family: var(--font-manrope);
+}
+.font-mono-dial {
+  font-family: var(--font-mono);
+}
